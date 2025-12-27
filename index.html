@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prastut Bhattarai | AI & Full Stack Engineer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #2563eb;
+    --secondary: #64748b;
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --card: #ffffff;
+    --shadow: rgba(0,0,0,0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px var(--shadow);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+/* ===== HERO ===== */
+.hero {
+    padding: 90px 0 70px;
+    text-align: center;
+}
+
+.profile-wrapper {
+    width: 170px;
+    height: 170px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--primary), #60a5fa);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    background: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 20px 0 8px;
+}
+
+.hero p {
+    color: var(--secondary);
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.15rem;
+}
+
+.cta {
+    margin-top: 30px;
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cta:hover {
+    background: #1d4ed8;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 40px;
+}
+
+/* ===== ABOUT ===== */
+.about-text {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: var(--secondary);
+}
+
+/* ===== SKILLS ===== */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.skill {
+    background: var(--card);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px var(--shadow);
+    font-size: 0.9rem;
+}
+
+/* ===== PROJECTS ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 22px;
+}
+
+.project-content h3 {
+    margin-top: 0;
+}
+
+.tags {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.75rem;
+    background: #e0e7ff;
+    color: #1e40af;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+/* ===== CONTACT ===== */
+.socials {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.socials a {
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.socials a:hover {
+    color: var(--primary);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--card);
+    text-align: center;
+    padding: 25px;
+    color: var(--secondary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Prastut Bhattarai</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="container">
+        <div class="profile-wrapper">
+            <img src="profile.jpg" alt="Prastut Bhattarai" class="profile-img">
+        </div>
+        <h1>Prastut Bhattarai</h1>
+        <p>
+            AI Engineer · Full Stack Developer · B.Sc. in Computational Mathematics 
+            <br>Focused on applying mathematical modeling, machine learning, and software engineering to real-world systems.
+        </p>
+        <a href="#projects" class="cta">View Projects</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="about-text">
+            I hold a B.Sc. in Computational Mathematics with a strong foundation in linear algebra,
+            probability, optimization, and numerical methods. 
+            <br>I focus on applying machine learning
+            and software engineering to real-world systems.
+            I’ve worked on computer vision, graph neural networks,
+            retrieval-augmented generation (RAG), and blockchain-based AI systems.
+            <br><br>
+            I care deeply about <b>understanding systems from first principles</b>, not treating AI as a black box.
+        </p>
+
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">PyTorch</div>
+            <div class="skill">FastAPI</div>
+            <div class="skill">LangChain / LangGraph / LangSmith</div>
+            <div class="skill">SQLAlchemy</div>
+            <div class="skill">PostgresSQL</div>
+            <div class="skill">Alembic</div>
+            <div class="skill">Linux</div>
+            <div class="skill">RAG</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Computer Vision</div>
+            <div class="skill">Graph Neural Network</div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x400/2563eb/ffffff?text=Chest+X-Ray+CNN" alt="">
+                <div class="project-content">
+                    <h3>Pneumonia Detection (CNN)</h3>
+                    <p>ResNet-18 based chest X-ray classifier achieving 92% accuracy with optimized preprocessing.</p>
+                    <div class="tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Medical AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x400/16a34a/ffffff?text=Climate+GNN" alt="">
+                <div class="project-content">
+                    <h3>Climate Data Imputation (GNN)</h3>
+                    <p>Graph Neural Network to predict missing precipitation data across Nepal’s weather stations.</p>
+                    <div class="tags">
+                        <span class="tag">GNN</span>
+                        <span class="tag">Time-Series</span>
+                        <span class="tag">Climate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/600x400/dc2626/ffffff?text=RAG+System" alt="">
+                <div class="project-content">
+                    <h3>RAG-Based AI System</h3>
+                    <p>Async RAG pipeline with LangGraph, Pinecone, and HuggingFace embeddings.</p>
+                    <div class="tags">
+                        <span class="tag">LangGraph</span>
+                        <span class="tag">RAG</span>
+                        <span class="tag">LLMs</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p style="text-align:center;">Open to internships, research roles, and impactful engineering work.</p>
+        <div class="socials">
+            <a href="mailto:prastutbhattarai44@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/prastut-bhattarai-b336b5216/">LinkedIn</a>
+            <a href="https://github.com/">GitHub</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © 2025 Prastut Bhattarai — Built with clarity, not frameworks.
+</footer>
+
+</body>
+</html>
