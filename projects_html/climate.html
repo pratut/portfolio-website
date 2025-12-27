@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pneumonia Detection Project | Details</title>
+    <title>Climate Data Imputation (GNN) | Details</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #2563eb; --bg: #f8fafc; --text: #0f172a; --card: #ffffff; }
@@ -21,29 +21,29 @@
 <div class="container">
     <a href="../index.html" class="back-link">← Back to Portfolio</a>
     
-    <h1>Pneumonia Detection (CNN)</h1>
+    <h1>Climate Data Imputation (GNN)</h1>
     
     <div class="tech-stack">
         <span class="tag">Python</span>
         <span class="tag">PyTorch</span>
-        <span class="tag">Computer Vision</span>
+        <span class="tag">Graph Neural Networks</span>
+        <span class="tag">Climate Data</span>
     </div>
 
-    <img src="https://via.placeholder.com/800x400" alt="Project Banner" class="project-img">
+    <img src="https://via.placeholder.com/800x400/16a34a/ffffff?text=Climate+GNN" alt="Project Banner" class="project-img">
 
     <h2>Project Overview</h2>
-    <p>This project involved building a deep learning model to automate the detection of pneumonia from chest X-ray images. By utilizing a pre-trained ResNet-18 architecture and fine-tuning it on the RSNA dataset, I achieved a validation accuracy of 92%.</p>
+    <p>This project built a Graph Neural Network (GNN) to predict missing precipitation data across Nepal’s weather stations. The dataset included ERA5 weather data and local station measurements, addressing data gaps in rural regions.</p>
 
     <h2>Key Features</h2>
     <ul>
-        <li>Implemented custom data augmentation to handle class imbalance.</li>
-        <li>Used Grad-CAM to visualize which parts of the X-ray the model focused on.</li>
-        <li>Deployed as a microservice using FastAPI.</li>
+        <li>Converted NetCDF data to time-series for PyTorch DataLoader.</li>
+        <li>Modeled weather stations as graph nodes for spatial dependencies.</li>
+        <li>Optimized GNN to predict missing precipitation values with high accuracy.</li>
     </ul>
 
-    <a href="https://github.com/yourusername/project" class="back-link" target="_blank">View Code on GitHub</a>
+    <a href="https://github.com/yourusername/climate-gnn" class="back-link" target="_blank">View Code on GitHub</a>
 </div>
-
 
 </body>
 </html>
