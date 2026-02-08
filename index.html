@@ -8,33 +8,35 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--primary:#2563eb;--secondary:#64748b;--bg:#f8fafc;--text:#0f172a;--card:#ffffff;--shadow:rgba(0,0,0,0.08)}
+:root{--primary:#4f46e5;--secondary:#64748b;--bg:#f9fafb;--text:#111827;--card:#ffffff;--shadow:rgba(0,0,0,0.05)}
 *{box-sizing:border-box}
 body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
 .container{max-width:1100px;margin:auto;padding:0 20px}
 header{background:var(--card);position:sticky;top:0;z-index:100;box-shadow:0 2px 6px var(--shadow)}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font-weight:700;font-size:1.4rem;color:var(--primary)}
-nav ul{display:flex;list-style:none;gap:24px;margin:0}
-nav a{text-decoration:none;color:var(--text);font-weight:500}
-nav a:hover{color:var(--primary)}
-.hero{padding:90px 0 70px;text-align:center}
-.profile-wrapper{width:170px;height:170px;margin:auto;border-radius:50%;padding:6px;background:linear-gradient(135deg,var(--primary),#60a5fa)}
+.logo{font-weight:600;font-size:1.4rem;color:var(--text)}
+nav ul{display:flex;list-style:none;gap:28px;margin:0}
+nav a{text-decoration:none;color:var(--text);font-weight:500;font-size:0.95rem}
+nav a:hover{color:var(--primary);border-bottom:2px solid var(--primary)}
+.hero{padding:100px 0 70px;text-align:center}
+.profile-wrapper{width:170px;height:170px;margin:auto;border-radius:50%;padding:6px;background:linear-gradient(135deg,var(--primary),#818cf8)}
 .profile-img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center top;background:#fff}
-.hero h1{font-size:3rem;margin:20px 0 8px}
-.hero p{color:var(--secondary);max-width:700px;margin:auto;font-size:1.15rem}
-.cta{margin-top:30px;display:inline-block;background:var(--primary);color:white;padding:14px 28px;border-radius:8px;font-weight:600;text-decoration:none}
-.cta:hover{background:#1d4ed8}
+.hero h1{font-size:2.5rem;margin:20px 0 8px;font-weight:700}
+.hero p{color:var(--secondary);max-width:700px;margin:auto;font-size:1.1rem;font-weight:400}
 section{padding:70px 0}
-.section-title{text-align:center;font-size:2.4rem;margin-bottom:40px}
-.about-text{max-width:800px;margin:auto;text-align:center;color:var(--secondary)}
-.skills{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
-.skill{background:var(--card);padding:8px 16px;border-radius:20px;box-shadow:0 2px 4px var(--shadow);font-size:0.9rem}
+.section-title{text-align:center;font-size:2rem;font-weight:600;margin-bottom:30px;color:var(--text)}
+.about-text{max-width:800px;margin:auto;text-align:left;color:var(--secondary);padding:0 20px}
+.skills-container{margin-top:40px}
+.skill-category{margin-bottom:25px}
+.skill-category h3{color:var(--text);margin-bottom:15px;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;font-weight:600;padding-bottom:5px;display:inline-block}
+.skill-list{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.skill{padding:8px 16px;border-radius:25px;font-size:0.85rem;font-weight:500;background:var(--card);color:var(--text);border:1px solid #e5e7eb;transition:all 0.3s ease;box-shadow:0 1px 3px var(--shadow);}
+.skill:hover{transform: translateY(-3px);background:var(--primary);color:white;border-color:var(--primary);box-shadow:0 6px 12px rgba(79, 70, 229, 0.2);}
 .carousel-container{position:relative;width:100%;overflow:hidden;margin:40px 0;padding:0 40px}
 .carousel-wrapper{overflow:hidden;width:100%}
 .carousel-track{display:flex;transition:transform 0.5s ease-in-out;gap:24px}
-.cert-card{min-width:calc(33.333% - 16px);flex:0 0 calc(33.333% - 16px);background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 8px 20px var(--shadow);transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column}
-.cert-card:hover{transform:translateY(-10px);box-shadow:0 16px 30px var(--shadow)}
+.cert-card{min-width:calc(33.333% - 16px);flex:0 0 calc(33.333% - 16px);background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 4px 12px var(--shadow);transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;border:1px solid #e5e7eb}
+.cert-card:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(79, 70, 229, 0.1)}
 .cert-image{width:100%;height:200px;overflow:hidden;cursor:pointer;flex-shrink:0}
 .cert-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease}
 .cert-image:hover img{transform:scale(1.05)}
@@ -43,8 +45,8 @@ section{padding:70px 0}
 .cert-desc{margin:0 0 15px 0;color:var(--secondary);font-size:0.9rem;flex-grow:1}
 .issuer{margin:0 0 8px 0;color:var(--primary);font-weight:600}
 .date{margin:0 0 15px 0;color:var(--secondary);font-size:0.9rem}
-.verify-btn,.learn-btn{display:inline-block;background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:600;transition:background 0.3s ease;border:none;cursor:pointer;align-self:flex-start}
-.verify-btn:hover,.learn-btn:hover{background:#1d4ed8}
+.verify-btn,.learn-btn{display:inline-block;background:var(--primary);color:white;padding:10px 20px;border-radius:6px;text-decoration:none;font-weight:500;transition:all 0.3s ease;border:none;cursor:pointer;align-self:flex-start;font-size:0.9rem}
+.verify-btn:hover,.learn-btn:hover{background:#4338ca;transform: translateY(-2px);box-shadow:0 4px 8px rgba(79, 70, 229, 0.3)}
 .carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:var(--card);border:none;width:40px;height:40px;border-radius:50%;font-size:18px;color:var(--text);cursor:pointer;box-shadow:0 4px 10px var(--shadow);z-index:10;display:flex;align-items:center;justify-content:center;transition:background 0.3s ease,color 0.3s ease}
 .carousel-btn:hover{background:var(--primary);color:white}
 .prev-btn{left:0}
@@ -57,12 +59,12 @@ section{padding:70px 0}
 .lightbox-content img{width:100%;height:auto;max-height:70vh;object-fit:contain;border-radius:8px}
 .close-btn{position:absolute;top:-40px;right:0;color:white;font-size:40px;font-weight:bold;cursor:pointer;z-index:1001}
 .lightbox-caption{color:white;padding:15px 0;font-size:1.2rem}
-.socials{text-align:center;margin-top:20px;display:flex;justify-content:center;gap:30px}
-.socials a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform 0.3s ease}
-.socials a:hover{transform:scale(1.1)}
-.socials svg{width:32px;height:32px;fill:var(--secondary);transition:fill 0.3s ease}
+.socials{text-align:center;margin-top:30px;display:flex;justify-content:center;gap:24px}
+.socials a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;transition:transform 0.3s ease;border-radius:50%;padding:8px}
+.socials a:hover{transform:scale(1.1);background-color:rgba(79, 70, 229, 0.1)}
+.socials svg{width:28px;height:28px;fill:var(--text);transition:fill 0.3s ease}
 .socials a:hover svg{fill:var(--primary)}
-footer{background:var(--card);text-align:center;padding:25px;color:var(--secondary)}
+footer{background:var(--bg);text-align:center;padding:30px;color:var(--text);font-size:0.9rem;border-top:1px solid #e5e7eb}
 @media (max-width:1024px){.cert-card{min-width:calc(50% - 12px);flex:0 0 calc(50% - 12px)}}
 @media (max-width:768px){.cert-card{min-width:100%;flex:0 0 100%}.carousel-container{padding:0 20px}.carousel-btn{width:35px;height:35px;font-size:16px}nav ul{display:none}.hero h1{font-size:2.4rem}}
 </style>
@@ -71,11 +73,13 @@ footer{background:var(--card);text-align:center;padding:25px;color:var(--seconda
 <header>
 <div class="container">
 <nav>
-<div class="logo">Prastut Bhattarai</div>
+<div class="logo"><span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Prastut Bhattarai</span></div>
 <ul>
 <li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#certifications">Certifications</a></li>
+<li><a href="#awards">Awards</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
@@ -84,162 +88,192 @@ footer{background:var(--card);text-align:center;padding:25px;color:var(--seconda
 <main>
 <section class="hero">
 <div class="container">
-<div class="profile-wrapper">
-<img src="src/profile.jpg" alt="Prastut Bhattarai" class="profile-img" width="158" height="158">
+<div class="relative flex justify-center mb-6">
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
+  <div class="relative z-10 overflow-hidden bg-white rounded-2xl p-0.5 shadow-xl">
+    <img src="src/profile2.png" alt="Prastut Bhattarai" class="rounded-2xl object-cover border-2 border-white" width="200" height="200">
+  </div>
 </div>
-<h1>Prastut Bhattarai</h1>
-<p>AI Engineer · Full Stack Developer · B.Sc. in Computational Mathematics<br>Focused on applying mathematical modeling, machine learning, and software engineering to real-world systems.</p>
-<a href="#projects" class="cta">View Projects</a>
+<h1 class="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Prastut Bhattarai</h1>
+<p class="text-lg md:text-xl text-center text-gray-600 max-w-2xl mx-auto font-light">Machine Learning Engineer · B.Sc. in Computational Mathematics</p>
 </div>
 </section>
 <section id="about">
 <div class="container">
 <h2 class="section-title">About Me</h2>
-<p class="about-text">I hold a B.Sc. in Computational Mathematics with a strong foundation in linear algebra, probability, optimization, and numerical methods.<br>I focus on applying machine learning and software engineering to real-world systems. I’ve worked on computer vision, graph neural networks, retrieval-augmented generation (RAG), and blockchain-based AI systems.<br><br>I care deeply about <b>understanding systems from first principles</b>, not treating AI as a black box.</p>
-<div class="skills">
-<div class="skill">Python</div><div class="skill">PyTorch</div><div class="skill">FastAPI</div><div class="skill">LangChain / LangGraph</div><div class="skill">SQLAlchemy</div><div class="skill">PostgresSQL</div><div class="skill">Alembic</div><div class="skill">Linux</div><div class="skill">RAG</div><div class="skill">Machine Learning</div><div class="skill">Computer Vision</div><div class="skill">GNN</div>
+<p class="about-text">I am a graduate in Computational Mathematics from Kathmandu University, Nepal, and I am passionate about applying mathematics through programming. I utilize Python and machine learning tools to develop practical applications in various fields, including computer vision, graph modeling, and more.
+</br>
+</br>I enjoy understanding the math behind ML models, not just using them, and turning that understanding into real-world projects. 
+</br>
+</br>Outside of math and technology, I stay active in community programs and group activities, maintaining a balanced perspective between tech and social life.</p>
+<section id="experience">
+<div class="container">
+<h2 class="section-title">Experience</h2>
+<div class="cert-card">
+<div class="cert-info">
+<h3>Machine Learning Trainee</h3>
+<p class="issuer">E.K. Solutions Pvt. Ltd. — Lalitpur, Nepal</p>
+<p class="date">October 2025 – January 2026</p>
+<p class="cert-desc">Conducted theoretical study of contrastive learning and fine-tuned a computer vision (UNet) model for image segmentation.</p>
+</div>
+</div>
+<div class="cert-card">
+<div class="cert-info">
+<h3>AI Traineeship</h3>
+<p class="issuer">Bajra Technologies Pvt. Ltd. — Kathmandu, Nepal</p>
+<p class="date">March 2025 – June 2025</p>
+<p class="cert-desc">Completed 13-week AI traineeship covering ML/DL foundations; built a Transformer-based English-to-Nepali translation system.</p>
+</div>
 </div>
 </div>
 </section>
 <section id="projects">
 <div class="container">
 <h2 class="section-title">Selected Projects</h2>
-<div class="carousel-container" id="projects-carousel">
-<button class="carousel-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
-<div class="carousel-wrapper">
-<div class="carousel-track">
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/2563eb/ffffff?text=Chest+X-Ray+CNN','Pneumonia Detection (CNN)')">
-<img src="https://via.placeholder.com/600x400/2563eb/ffffff?text=Chest+X-Ray+CNN" alt="Pneumonia Detection" width="300" height="200" loading="lazy">
-</div>
+<div class="cert-card" onclick="location.href='./projects_html/pneumonia.html';" style="cursor: pointer;">
 <div class="cert-info">
 <h3>Pneumonia Detection (CNN)</h3>
+<p class="issuer">Computer Vision Project</p>
 <p class="cert-desc">ResNet-18 based chest X-ray classifier achieving 92% accuracy with optimized preprocessing.</p>
-<a href="./projects_html/pneumonia.html" class="learn-btn">Learn More</a>
 </div>
 </div>
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/16a34a/ffffff?text=Climate+GNN','Climate Data Imputation (GNN)')">
-<img src="https://via.placeholder.com/600x400/16a34a/ffffff?text=Climate+GNN" alt="Climate Data GNN" width="300" height="200" loading="lazy">
-</div>
+<div class="cert-card" onclick="location.href='./projects_html/climate.html';" style="cursor: pointer;">
 <div class="cert-info">
-<h3>Climate Data Imputation (GNN)</h3>
-<p class="cert-desc">Graph Neural Network to predict missing precipitation data across Nepal’s weather stations.</p>
-<a href="./projects_html/climate.html" class="learn-btn">Learn More</a>
+<h3>Weather Forecast via Graph Neural Networks</h3>
+<p class="issuer">Graph Neural Network Project</p>
+<p class="cert-desc">Modeled 750 weather stations in Nepal as a network graph, using STGCN to forecast 24 days of weather across 7 climate variables.</p>
 </div>
 </div>
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/dc2626/ffffff?text=RAG+System','RAG-Based AI System')">
-<img src="https://via.placeholder.com/600x400/dc2626/ffffff?text=RAG+System" alt="RAG System" width="300" height="200" loading="lazy">
-</div>
+<div class="cert-card" onclick="location.href='./projects_html/rag.html';" style="cursor: pointer;">
 <div class="cert-info">
 <h3>RAG-Based AI System</h3>
+<p class="issuer">Retrieval-Augmented Generation Project</p>
 <p class="cert-desc">Async RAG pipeline with LangGraph, Pinecone, and HuggingFace embeddings.</p>
-<a href="./projects_html/rag.html" class="learn-btn">Learn More</a>
 </div>
 </div>
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/2563eb/ffffff?text=Blockchain+AI','Blockchain AI Agent')">
-<img src="https://via.placeholder.com/600x400/2563eb/ffffff?text=Blockchain+AI" alt="Blockchain AI" width="300" height="200" loading="lazy">
-</div>
+<div class="cert-card" onclick="location.href='./projects_html/unet.html';" style="cursor: pointer;">
 <div class="cert-info">
-<h3>Blockchain AI Agent</h3>
-<p class="cert-desc">Autonomous agent for interacting with smart contracts using natural language.</p>
-<a href="#blockchain-details" class="learn-btn">Learn More</a>
+<h3>UNet Image Segmentation</h3>
+<p class="issuer">Computer Vision Project</p>
+<p class="cert-desc">Fine-tuned UNet model for image segmentation during Machine Learning Traineeship, with FastAPI and Streamlit inference pipeline.</p>
 </div>
-</div>
-</div>
-</div>
-<button class="carousel-btn next-btn" aria-label="Next Slide">&#10095;</button>
-<div class="carousel-dots"></div>
 </div>
 </div>
 </section>
 <section id="certifications">
 <div class="container">
 <h2 class="section-title">Certifications</h2>
-<div class="carousel-container" id="cert-carousel">
-<button class="carousel-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
-<div class="carousel-wrapper">
-<div class="carousel-track">
 <div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/2563eb/ffffff?text=AWS+Certified+Developer','AWS Certified Developer')">
-<img src="https://via.placeholder.com/300x200/2563eb/ffffff?text=AWS+Certified+Developer" alt="AWS Certified Developer" width="300" height="200" loading="lazy">
-</div>
 <div class="cert-info">
-<h3>AWS Certified Developer</h3>
-<p class="issuer">Amazon Web Services</p>
-<p class="date">June 2023</p>
-<a href="https://www.aws.training/Certification" target="_blank" rel="noopener" class="verify-btn">Verify</a>
+<h3>Deep Learning Specialization</h3>
+<p class="issuer">DeepLearning.AI, Coursera</p>
+<p class="date">December 2025</p>
+<p class="cert-desc">Neural networks and deep learning foundations, Binary Classification, Cost Function, Gradient Descent, Logistic Regression, Optimization Algorithms, CNNs, RNNs/LSTMs, and Attention mechanisms.</p>
+<a href="https://www.coursera.org/account/accomplishments/specialization/WD6PIB7677OM?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=s12n" class="verify-btn" target="_blank" rel="noopener">Verify Credential</a>
 </div>
 </div>
 <div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/16a34a/ffffff?text=Google+Cloud+Professional','Google Cloud Professional')">
-<img src="https://via.placeholder.com/300x200/16a34a/ffffff?text=Google+Cloud+Professional" alt="Google Cloud Professional" width="300" height="200" loading="lazy">
-</div>
 <div class="cert-info">
-<h3>Google Cloud Professional</h3>
-<p class="issuer">Google Cloud</p>
-<p class="date">March 2023</p>
-<a href="https://cloud.google.com/certification" target="_blank" rel="noopener" class="verify-btn">Verify</a>
+<h3>Python for Data Science, AI & Development</h3>
+<p class="issuer">IBM, Coursera</p>
+<p class="date">November 2024</p>
+<p class="cert-desc">Python fundamentals, OOP, error handling, NumPy, Pandas, data analysis, web scraping, REST API integration, and JSON/CSV data processing.</p>
+<a href="https://www.coursera.org/account/accomplishments/verify/7P878BOYXXBQ?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" class="verify-btn" target="_blank" rel="noopener">Verify Credential</a>
 </div>
 </div>
+</div>
+</section>
+<section id="awards">
+<div class="container">
+<h2 class="section-title">Honors & Awards</h2>
 <div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/dc2626/ffffff?text=Azure+Fundamentals','Azure Fundamentals')">
-<img src="https://via.placeholder.com/300x200/dc2626/ffffff?text=Azure+Fundamentals" alt="Azure Fundamentals" width="300" height="200" loading="lazy">
-</div>
 <div class="cert-info">
-<h3>Azure Fundamentals</h3>
-<p class="issuer">Microsoft</p>
-<p class="date">January 2023</p>
-<a href="https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/" target="_blank" rel="noopener" class="verify-btn">Verify</a>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/7e22ce/ffffff?text=TensorFlow+Developer','TensorFlow Developer')">
-<img src="https://via.placeholder.com/300x200/7e22ce/ffffff?text=TensorFlow+Developer" alt="TensorFlow Developer" width="300" height="200" loading="lazy">
-</div>
-<div class="cert-info">
-<h3>TensorFlow Developer</h3>
-<p class="issuer">DeepLearning.AI</p>
-<p class="date">September 2022</p>
-<a href="https://www.deeplearning.ai/certificates/" target="_blank" rel="noopener" class="verify-btn">Verify</a>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/0d9488/ffffff?text=Machine+Learning','Machine Learning')">
-<img src="https://via.placeholder.com/300x200/0d9488/ffffff?text=Machine+Learning" alt="Machine Learning" width="300" height="200" loading="lazy">
-</div>
-<div class="cert-info">
-<h3>Machine Learning</h3>
-<p class="issuer">Stanford University</p>
-<p class="date">July 2022</p>
-<a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener" class="verify-btn">Verify</a>
-</div>
-</div>
-<div class="cert-card">
-<div class="cert-image" onclick="openLightbox('https://via.placeholder.com/600x400/ea580c/ffffff?text=Python+for+Data+Science','Python for Data Science')">
-<img src="https://via.placeholder.com/300x200/ea580c/ffffff?text=Python+for+Data+Science" alt="Python for Data Science" width="300" height="200" loading="lazy">
-</div>
-<div class="cert-info">
-<h3>Python for Data Science</h3>
-<p class="issuer">IBM</p>
-<p class="date">May 2022</p>
-<a href="https://www.coursera.org/professional-certificates/ibm-data-science" target="_blank" rel="noopener" class="verify-btn">Verify</a>
+<h3>EU Youth Sounding Board Member</h3>
+<p class="issuer">European Union Delegation to Nepal</p>
+<p class="date">September 2025</p>
+<p class="cert-desc">Selected as one of 25 members from 1,800 applicants for the European Union's Youth Engagement initiative in Nepal, contributing to digital inclusion, youth empowerment, climate justice and green growth.</p>
+<a href="https://www.ysbnepal.org/2025-member-details#prastut" class="verify-btn" target="_blank" rel="noopener">View Details</a>
 </div>
 </div>
 </div>
-</div>
-<button class="carousel-btn next-btn" aria-label="Next Slide">&#10095;</button>
-<div class="carousel-dots"></div>
-</div>
-</div>
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-<div class="lightbox-content" onclick="event.stopPropagation()">
-<span class="close-btn" onclick="closeLightbox()">&times;</span>
-<img id="lightbox-img" src="" alt="Certificate Preview">
-<div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
+</section>
+<section id="skills">
+<div class="container">
+<h2 class="section-title">Skills and Abilities</h2>
+<script src="https://cdn.tailwindcss.com"></script>
+<div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 font-sans">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+    
+    <div class="bg-white rounded-xl shadow-md border-l-4 border-blue-500 p-5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02]">
+      <div class="flex items-center mb-3">
+        <div class="bg-blue-100 p-2 rounded-lg mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h3 class="text-blue-600 font-bold uppercase tracking-wide text-xs">Programming Languages</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100 hover:bg-blue-100 transition-colors cursor-default">Python</span>
+        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">C++</span>
+        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">SQL</span>
+        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">R</span>
+        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">MATLAB</span>
+        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-xs font-medium border border-blue-100">LaTeX</span>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md border-l-4 border-green-500 p-5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02]">
+      <div class="flex items-center mb-3">
+        <div class="bg-green-100 p-2 rounded-lg mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h3 class="text-green-600 font-bold uppercase tracking-wide text-xs">Frameworks & Libraries</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 rounded-full text-xs font-medium border border-green-100">PyTorch</span>
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 rounded-full text-xs font-medium border border-green-100">FastAPI</span>
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 rounded-full text-xs font-medium border border-green-100">LangChain / LangGraph</span>
+        <span class="px-3 py-1.5 bg-green-50 text-green-700 rounded-full text-xs font-medium border border-green-100">SQLAlchemy</span>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md border-l-4 border-purple-500 p-5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02]">
+      <div class="flex items-center mb-3">
+        <div class="bg-purple-100 p-2 rounded-lg mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-600" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+          </svg>
+        </div>
+        <h3 class="text-purple-600 font-bold uppercase tracking-wide text-xs">Domains & Expertise</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-xs font-medium border border-purple-100">Machine Learning</span>
+        <span class="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-xs font-medium border border-purple-100">Computer Vision</span>
+        <span class="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-xs font-medium border border-purple-100">Graph Neural Networks</span>
+        <span class="px-3 py-1.5 bg-purple-50 text-purple-700 rounded-full text-xs font-medium border border-purple-100">RAG</span>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-md border-l-4 border-orange-500 p-5 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02]">
+      <div class="flex items-center mb-3">
+        <div class="bg-orange-100 p-2 rounded-lg mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 00-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h3 class="text-orange-600 font-bold uppercase tracking-wide text-xs">Tools & Platforms</h3>
+      </div>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-full text-xs font-medium border border-orange-100">Git</span>
+        <span class="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-full text-xs font-medium border border-orange-100">Linux</span>
+        <span class="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-full text-xs font-medium border border-orange-100">PostgreSQL</span>
+      </div>
+    </div>
+
+  </div>
 </div>
 </section>
 <section id="contact">
@@ -253,16 +287,15 @@ footer{background:var(--card);text-align:center;padding:25px;color:var(--seconda
 <a href="https://www.linkedin.com/in/prastut-bhattarai-b336b5216/" title="LinkedIn" target="_blank" rel="noopener" aria-label="LinkedIn">
 <svg viewBox="0 0 448 512" width="32" height="32"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
 </a>
-<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener" aria-label="GitHub">
+<a href="https://github.com/pratut" title="GitHub" target="_blank" rel="noopener" aria-label="GitHub">
 <svg viewBox="0 0 496 512" width="32" height="32"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-5.9-.2-21.8-.2-42.7-61.6 13.3-76.3-29.6-76.3-29.6-11.7-29.6-28.5-37.5-28.5-37.5-20.1-13.7 1.5-13.4 1.5-13.4 22.3 1.6 34.1 22.9 34.1 22.9 19.8 33.9 52 24.1 64.7 18.4 2-14.3 7.7-24.1 14.1-29.6-53.7-6.1-110.1-26.7-110.1-118.9 0-26.3 9.4-47.8 24.8-64.7-2.5-6-10.7-30.6 2.4-63.8 0 0 20.2-6.5 66.2 24.6 19.2-5.4 39.8-8 60.3-8s41.1 2.6 60.3 8c46-31.1 66.2-24.6 66.2-24.6 13.1 33.2 4.9 57.8 2.4 63.8 15.4 16.9 24.8 38.4 24.8 64.7 0 92.5-56.5 112.7-110.3 118.8 8 6.9 15.1 20.5 15.1 41.3 0 29.8-.2 53.8-.2 61.1 0 6.6 4.5 14.6 17.4 12.1 99.6-33.3 169.3-128.3 169.3-239.3C496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
 </a>
 </div>
 </div>
 </section>
-</main>
-<footer>© 2025 Prastut Bhattarai — Built with clarity, not frameworks.</footer>
+<footer>© 2025 Prastut Bhattarai — (+977) 9861834237 | Chandol, 44600 Kathmandu (Nepal)</footer>
 <script>
-function initCarousel(container){let track=container.querySelector('.carousel-track'),dotsCon=container.querySelector('.carousel-dots'),cards=track.children,tot=cards.length,cIdx=0,cardsShow=3,tS=0,wrp=container.querySelector('.carousel-wrapper');function upd(){if(!cards[0])return;let w=cards[0].offsetWidth+24;track.style.transform=`translateX(${-cIdx*w}px)`;}function crtDots(){dotsCon.innerHTML='';let c=Math.max(1,tot-cardsShow+1);for(let i=0;i<c;i++){let d=document.createElement('div');d.className='dot '+(i===cIdx?'active':'');d.onclick=()=>{cIdx=i;upd();updDots();};dotsCon.appendChild(d);}}function updDots(){dotsCon.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cIdx));}function move(d){let m=Math.max(0,tot-cardsShow);if(d===1)cIdx=cIdx<m?cIdx+1:0;else cIdx=cIdx>0?cIdx-1:m;upd();updDots();}function handleResize(){let w=window.innerWidth;cardsShow=w<768?1:w<1024?2:3;let m=Math.max(0,tot-cardsShow);if(cIdx>m)cIdx=m;upd();crtDots();}container.querySelector('.prev-btn').onclick=()=>move(-1);container.querySelector('.next-btn').onclick=()=>move(1);window.addEventListener('resize',handleResize);handleResize();wrp.addEventListener('touchstart',e=>{tS=e.changedTouches[0].screenX},{passive:true});wrp.addEventListener('touchend',e=>{if(tS-e.changedTouches[0].screenX>50)move(1);else if(e.changedTouches[0].screenX-tS>50)move(-1);},{passive:true});}document.querySelectorAll('.carousel-container').forEach(initCarousel);function openLightbox(s,c){let l=document.getElementById('lightbox'),i=document.getElementById('lightbox-img');i.src=s;document.getElementById('lightbox-caption').textContent=c;l.style.display='block';document.body.style.overflow='hidden';}function closeLightbox(){document.getElementById('lightbox').style.display='none';document.body.style.overflow='auto';}
+function initCarousel(container){let track=container.querySelector('.carousel-track'),dotsCon=container.querySelector('.carousel-dots'),cards=track.children,tot=cards.length,cIdx=0,cardsShow=3,tS=0,wrp=container.querySelector('.carousel-wrapper');function upd(){if(!cards[0])return;let w=cards[0].offsetWidth+24;track.style.transform=`translateX(${-cIdx*w}px)`;}function crtDots(){dotsCon.innerHTML='';let c=Math.max(1,tot-cardsShow+1);for(let i=0;i<c;i++){let d=document.createElement('div');d.className='dot '+(i===cIdx?'active':'');d.onclick=()=>{cIdx=i;upd();updDots();};dotsCon.appendChild(d);}}function updDots(){dotsCon.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cIdx));}function move(d){let m=Math.max(0,tot-cardsShow);if(d===1)cIdx=cIdx<m?cIdx+1:0;else cIdx=cIdx>0?cIdx-1:m;upd();updDots();}function handleResize(){let w=window.innerWidth;cardsShow=w<768?1:w<1024?2:3;let m=Math.max(0,tot-cardsShow);if(cIdx>m)cIdx=m;upd();crtDots();}container.querySelector('.prev-btn').onclick=()=>move(-1);container.querySelector('.next-btn').onclick=()=>move(1);window.addEventListener('resize',handleResize);handleResize();wrp.addEventListener('touchstart',e=>{tS=e.changedTouches[0].screenX},{passive:true});wrp.addEventListener('touchend',e=>{if(tS-e.changedTouches[0].screenX>50)move(1);else if(e.changedTouches[0].screenX-tS>50)move(-1);},{passive:true});}document.querySelectorAll('#award-carousel').forEach(initCarousel);function openLightbox(s,c){let l=document.getElementById('lightbox'),i=document.getElementById('lightbox-img');i.src=s;document.getElementById('lightbox-caption').textContent=c;l.style.display='block';document.body.style.overflow='hidden';}function closeLightbox(){document.getElementById('lightbox').style.display='none';document.body.style.overflow='auto';}
 </script>
 </body>
 </html>

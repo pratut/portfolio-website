@@ -9,7 +9,22 @@
         :root { --primary: #2563eb; --bg: #f8fafc; --text: #0f172a; --card: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 40px 20px; }
         .container { max-width: 800px; margin: auto; background: var(--card); padding: 40px; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        .back-link { text-decoration: none; color: var(--primary); font-weight: 600; display: inline-block; margin-bottom: 20px; }
+        .back-link { 
+            text-decoration: none; 
+            color: var(--primary); 
+            font-weight: 600; 
+            display: inline-flex; 
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: var(--primary);
+            color: white;
+        }
         h1 { color: var(--primary); margin-top: 0; }
         .project-img { width: 100%; border-radius: 8px; margin: 20px 0; }
         .tech-stack { display: flex; gap: 10px; margin: 20px 0; }
@@ -19,8 +34,14 @@
 <body>
 
 <div class="container">
-    <a href="../index.html" class="back-link">← Back to Portfolio</a>
-    
+    <a href="../index.html" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px; vertical-align: middle;">
+            <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Portfolio
+    </a>
+
     <h1>Pneumonia Detection (CNN)</h1>
     
     <div class="tech-stack">
